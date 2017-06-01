@@ -40,7 +40,7 @@ module CcacheToolchain
       File.open info_plist_file, "w" do |f|
         f.write toolchain_info.to_json
       end
-      Kernel.system "plutil", "-convert", "xml1", info_plist_file
+      system "plutil", "-convert", "xml1", info_plist_file
     end
 
     mkdir "/Users/#{ENV["USER"]}/Library/Developer/Toolchains" do
@@ -55,6 +55,16 @@ module CcacheToolchain
 	To use the Xcode toolchain, select it in the Xcode preferences,
 	pass --toolchain ccache to xcrun, or export TOOLCHAINS=ccache.
 	EOS
+  end
+
+  private
+
+  # Use puts instead of ohai for verbose output
+  def system(cmd, *args)
+    alias :ohai_original :ohai
+    alias :ohai :puts
+    super
+    alias :ohai :ohai_original
   end
 end
 
