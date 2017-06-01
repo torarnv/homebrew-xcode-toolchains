@@ -21,3 +21,5 @@ $ brew install ccache
 Choose the `ccache` toolchain in Xcode's preferences:
 
 ![screenshot](/screenshot.png?raw=true)
+
+or `export TOOLCHAINS=ccache` when building on the command line.
