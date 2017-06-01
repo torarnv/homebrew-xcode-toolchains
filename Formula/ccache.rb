@@ -1,9 +1,6 @@
 require "formulary"
 
 module CcacheToolchain
-  def tap
-    nil
-  end
   def post_install
     super
 
@@ -58,6 +55,11 @@ module CcacheToolchain
     To use the Xcode toolchain, select it in the Xcode preferences,
     pass --toolchain ccache to xcrun, or export TOOLCHAINS=ccache.
     EOS
+  end
+
+  # Masquerade as not coming from a tap, to pour the default bottle
+  def tap
+    nil
   end
 
   private
