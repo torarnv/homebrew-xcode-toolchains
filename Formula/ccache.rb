@@ -13,7 +13,7 @@ module CcacheToolchain
       'Aliases' => ['ccache'],
       'DisplayName' => "ccache #{version} (Homebrew)",
       'ShortDisplayName' => "ccache #{version}",
-      'ReportProblemURL' => ''
+      'ReportProblemURL' => 'https://github.com/torarnv/homebrew-xcode-toolchains'
     }
 
     toolchain = prefix/"xctoolchain"
