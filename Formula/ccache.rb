@@ -1,12 +1,13 @@
 require "formulary"
 
 module CcacheToolchain
+  def tap
+    nil
+  end
   def post_install
     super
 
     ohai "Installing Xcode toolchain"
-
-    puts name, alias_path, alias_name, full_alias_name, path, tap
 
     toolchain_identifier = 'sh.brew.ccache'
     toolchain_info = {
