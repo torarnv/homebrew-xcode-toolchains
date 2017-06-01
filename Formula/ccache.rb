@@ -6,6 +6,8 @@ module CcacheToolchain
 
     ohai "Installing Xcode toolchain"
 
+    puts name, alias_path, alias_name, full_alias_name, path, tap
+
     toolchain_identifier = 'sh.brew.ccache'
     toolchain_info = {
       'CompatibilityVersion' => 2,
