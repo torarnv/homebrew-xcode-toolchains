@@ -67,7 +67,9 @@ module CcacheToolchain
   # Use puts instead of ohai for verbose output
   def system(cmd, *args)
     alias :ohai_original :ohai
-    alias :ohai :puts
+    def ohai(msg)
+      puts msg if ARGV.verbose?
+    end
     super
     alias :ohai :ohai_original
   end
