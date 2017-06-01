@@ -2,7 +2,7 @@
 
 Extensions to common Homebrew formulas to provide matching Xcode toolchains
 
-## Usage
+## Installation
 
 ```
 $ brew install torarnv/xcode-toolchains/ccache
@@ -16,7 +16,7 @@ $ brew tap-pin torarnv/xcode-toolchains
 $ brew install ccache
 ```
 
-### ccache
+## Usage
 
 Choose the `ccache` toolchain in Xcode's preferences:
 
