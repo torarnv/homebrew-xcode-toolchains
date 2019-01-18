@@ -75,5 +75,8 @@ module CcacheToolchain
   end
 end
 
+# Homebrew doesn't support meta-packages that just depend on other formulas,
+# only adding post-installation steps. As a workaround we look up the formula
+# for ccache and inherit it.
 Ccache = Formulary.factory("ccache").class
 Ccache.send :prepend, CcacheToolchain
