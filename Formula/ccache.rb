@@ -20,7 +20,7 @@ module CcacheToolchain
     toolchain.mkpath
 
     wrapper_script = libexec/"ccache.sh"
-    wrapper_script.write <<-EOS.undent
+    wrapper_script.write <<~EOS
       #!/bin/sh
       # Fall back to next toolchain in line
       read -r _ TOOLCHAINS <<< "$TOOLCHAINS"
