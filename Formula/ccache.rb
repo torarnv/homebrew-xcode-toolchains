@@ -51,7 +51,7 @@ module CcacheToolchain
   end
 
   def caveats
-    super + "\n" + <<-EOS.undent
+    super + "\n" + <<~EOS
     To use the Xcode toolchain, select it in the Xcode preferences,
     pass --toolchain ccache to xcrun, or export TOOLCHAINS=ccache.
     EOS
